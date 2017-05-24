@@ -107,7 +107,7 @@ pipeline {
     sucess {
       slackSend(color: "good", message: "${env.JOB_NAME} completed sucessfully, details at ${env.RUN_DISPLAY_URL}"}
                 }
-                failure
+                failure{
                 {
                   slackSend(color: "danger", message: "${env.JOB_NAME} failed, details at ${env.RUN_DISPLAY_URL}"}
                   
